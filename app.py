@@ -104,6 +104,7 @@ class App:
             self.image_ = image_
             self.image_.image = img
             self.image_.place(x=97,y=78) # it will display the image at particulr coordinate
+        print(self.filename)
 
     # show output function it will show the output of the given input
     def showOutput(self):

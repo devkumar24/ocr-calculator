@@ -21,7 +21,3 @@ def get_text(filename : str = ""):
 
     text = pytesseract.image_to_string(image)
     return (text, image)
-
-# file = "A:\\Pending Projects\\OCR Calculator\\ocr-calculator\\Images\\tri.png"
-# t,_ = get_text(file)
-# print(t)
