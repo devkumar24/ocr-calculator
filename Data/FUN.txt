@@ -1,0 +1,110 @@
+ID	FUNCTION	INPUT	OUTPUT
+1	Trigonometry	 sin^2(x) + cos^2(x)	1
+2	Trigonometry	 tan^2(x) + cot^2(x)	1
+3	Trigonometry	 sec^2(x) + cosec^2(x)	1
+4	Trigonometry	 sin^2(x)	 1 − cos^2(x)
+5	Trigonometry	 cos^2(X)	 1 - sin^2(X)
+6	Trigonometry	 sec^2(x)	 1 - cosec^2(X)
+7	Trigonometry	 cosec^2(x)	 1 - sec^2(x)
+8	Trigonometry	 tan^2(X)	 1 - cot^2(x)
+9	Trigonometry	 cot^2(x)	 1 - tan^2(x)
+10	Trigonometry	 sin(−x)	 −sin(x)
+11	Trigonometry	 cos(−x)	 cos(x)
+12	Trigonometry	 tan(−x)	 −tan(x)
+13	Trigonometry	 cot(-x)	 -cot(x)
+14	Trigonometry	 sec(-x)	 sec(x)
+15	Trigonometry	 cosec(-x)	 -cosec(x)
+16	Trigonometry	 -cosec(x)	 cosec(-x)
+17	Trigonometry	 -tan(X)	 tan(-x)
+18	Trigonometry	 -cot(x)	 cot(-x)
+19	Trigonometry	 -sin(x)	 sin(-x)
+20	Trigonometry	 tan(x)	 sin(x)/cos(x)
+21	Trigonometry	 cot(x)	 cos(x)/sin(x)
+22	Trigonometry	 sin(2x)	 2sin(x)cos(x)
+23	Trigonometry	 2sin(X)cos(x)	 2tan(X)/(1 + tan^2(x))
+24	Trigonometry	 2tan(X)/(1 + tan^2(x))	 2sin(x)cos(x)
+25	Trigonometry	 2sin(x)cos(x)	 sin(2x)
+26	Trigonometry	 cos(2x)	 cos^2(x) - sin^2(x)
+27	Trigonometry	 cos^2(x) - sin^2(x)	 2cos^2(x) - 1
+28	Trigonometry	 2cos^2(x) - 1	 1 - 2sin^2(x)
+29	Trigonometry	 1 - 2sin^2(x)	 (1 - tan^2(x))/(1 + tan^2(x))
+30	Trigonometry	 (1 - tan^2(x))/(1 + tan^2(x))	 1 - 2sin^2(x)
+31	Trigonometry	 tan^2(x)	 2tan(X)/(1 - tan^2(x))
+32	Trigonometry	 2tan(X)/(1 - tan^2(x))	 tan^2(x)
+33	Trigonometry	 sin(x/2)	 +- sqrt((1-cos(x))/2)
+34	Trigonometry	 sqrt((1-cos(x))/2)	 sin(x/2)
+35	Trigonometry	 -sqrt((1-cos(x))/2)	 sin(x/2)
+36	Trigonometry	 cos(x/2)	 +- sqrt((1 + cos(x))/2)
+37	Trigonometry	 sqrt((1 + cos(x))/2)	 cos(x/2)
+38	Trigonometry	 sqrt((1 + cos(x))/2)	 cos(x/2)
+39	Trigonometry	 tan(x/2)	 cosec(x) - cot(x)
+40	Trigonometry	 cosec(x) - cot(x)	 (1 - cos(x))/sin(x)
+41	Trigonometry	 (1 - cos(x))/sin(x)	 sin(x)/(1 + cos(x))
+42	Trigonometry	 sin(x)/(1 + cos(x))	 +-sqrt((1 - cos(x))/(1 + cos(X)))
+43	Trigonometry	 sqrt((1 - cos(x))/(1 + cos(X)))	 tan(x/2)
+44	Trigonometry	 -sqrt((1 - cos(x))/(1 + cos(X)))	 tan(x/2)
+45	Trigonometry	 cot(x/2)	 cosec(x) + cot(X)
+46	Trigonometry	 cosec(x) + cot(X)	 (1 + cos(x))/sin(x)
+47	Trigonometry	 (1 + cos(x))/sin(x)	 sin(x)/(1 - cos(x))
+48	Trigonometry	 sin(x)/(1 - cos(x))	 +-sqrt((1 + cos(x))/(1 - cos(X)))
+49	Trigonometry	 sqrt((1 + cos(x))/(1 - cos(X)))	 cot(x/2)
+50	Trigonometry	 -sqrt((1 - cos(x))/(1 + cos(X)))	 cot(x/2)
+51	Trigonometry	 sin(x + y)	 sin(x)sin(y) + cos(x)sin(y)
+52	Trigonometry	 sin(x - y)	 sin(x)cos(y) - cos(x)sin(y)
+53	Trigonometry	 sin(x)sin(y) + cos(x)sin(y)	 sin(x + y)
+54	Trigonometry	 sin(x)cos(y) - cos(x)sin(y)	 sin(x - y)
+55	Trigonometry	 cos(x + y)	 cos(x)cos(y) - sin(x)sin(y)
+56	Trigonometry	 cos(x - y)	 cos(x)cos(y) + sin(x)sin(y)
+57	Trigonometry	 cos(x)cos(y) - sin(x)sin(y)	 cos(x + y)
+58	Trigonometry	 cos(x)cos(y) + sin(x)sin(y)	 cos(x - y)
+59	Trigonometry	 tan(x + y)	 (tan(x) + tan(y))/(1 - tan(x)tan(y))
+60	Trigonometry	 tan(x - y)	 (tan(x) - tan(y))/(1 + tan(x)tan(y))
+61	Trigonometry	 (tan(x) + tan(y))/(1 - tan(x)tan(y))	 tan(x + y)
+62	Trigonometry	 (tan(x) - tan(y))/(1 + tan(x)tan(y))	 tan(x - y)
+63	Trigonometry	 cot(x + y)	 (cot(x)cot(y) - 1)/(cot(b) + cot(x))
+64	Trigonometry	 cot(x - y)	 (cot(x)cot(y) + 1)/(cot(b) - cot(x))
+65	Trigonometry	 (cot(x)cot(y) + 1)/(cot(b) - cot(x))	 cot(x - y)
+66	Trigonometry	 (cot(x)cot(y) - 1)/(cot(b) + cot(x))	 cot(x + y)
+67	Trigonometry	 sin(x) + sin(y)	 2sin((x + y)/2).cos((x - y)/2)
+68	Trigonometry	 2sin((x + y)/2).cos((x - y)/2)	 sin(x) + sin(y)
+69	Trigonometry	 cos(x) + cos(y)	 2cos((x + y)/2).cos((x - y)/2)
+70	Trigonometry	 2cos((x + y)/2).cos((x - y)/2)	 cos(x) + cos(y)
+71	Trigonometry	 sin(x)– sin(y)	 2cos(x + y)/2 . sin(x - y)/2
+72	Trigonometry	 2cos(x + y)/2 . sin(x - y)/2	 sin(x)– sin(y)
+73	Trigonometry	 cos(x) – cos(y)	 -2Sin(x + y)/2 . sin(x - y)/2
+74	Trigonometry	 -2sin(x + y)/2 . sin(x - y)/2	 cos(x) - cos(y)
+75	Trigonometry	 sin A + sin B	 2 sin(A+B)/2 . cos(A-B)/2
+76	Trigonometry	 2 sin(A+B)/2 . cos(A-B)/2	 sin A + sin B
+77	Trigonometry	 cos A + cos B	 2 cos(A+B)/2 . cos(A-B)/2
+78	Trigonometry	 2 cos(A+B)/2 . cos(A-B)/2	 cos A + cos B
+79	Trigonometry	 sin A – sin B	 2 cos(A+B)/2 . sin(A-B)/2
+80	Trigonometry	 2 cos(A+B)/2 . sin(A-B)/2	 sin A – sin B
+81	Trigonometry	 cos A – cos B	 -2 sin(A+B)/2 . sin(A-B)/2
+82	Trigonometry	 -2 sin(A+B)/2 . sin(A-B)/2	 cos A – cos B
+83	Trigonometry	 sin(A+B)	 sin(A).cos(B)+cos(A).sin(B)
+84	Trigonometry	 sin(A–B)	 sinA.cosB–cosA.sinB
+85	Trigonometry	 cos(A+B)	 cosA.cosB–sinA.sinB
+86	Trigonometry	 cos(A–B)	 cosA.cosB+sinA.sinB
+87	Trigonometry	 tan(A+B)	 tanA + tanB/(1 - tanA.tanB)
+88	Trigonometry	 tan(A-B)	 tanA - tanB/(1 + tanA.tanB)
+89	Trigonometry	 sin(x).sin(y)	 [cos(x - y) - cos(x + y)]/2
+90	Trigonometry	 sin(x).cos(y)	 [sin(x+y) - sin(x-y)]/2
+91	Trigonometry	 cos(x).cos(y)	 [cos(x + y) – cos(x – y)]/2
+92	Trigonometry	 [cos(x - y) - cos(x + y)]/2	 sin(x).sin(y)
+93	Trigonometry	 [sin(x+y) - sin(x-y)]/2	 sin(x).cos(y)
+94	Trigonometry	 [cos(x + y) – cos(x – y)]/2	 cos(x).cos(y)
+95	Trigonometry	 sin A. sin B = [cos (A – B) – cos (A + B)]/2	
+96	Trigonometry	 sin A. cos B = [sin (A + B) – sin (A – B)]/2	
+97	Trigonometry	 cos A. cos B = [cos (A + B) – cos (A – B)]/2	
+98	Trigonometry	 (1 – sin A)/(1 + sin A)	 (sec A – tan A)^2
+99	Trigonometry	 (1 – sin(x))/(1 + sin(x))	 (sec(x) – tan(x))^2
+100	Trigonometry	 (sec(x) – tan(x))^2	 (1 – sin(x))/(1 + sin(x))
+101	Trigonometry	 (sec A – tan A)^2	 (1 – sin A)/(1 + sin A)
+102	Trigonometry	 1/(cosec A – cot A) – 1/sin A	 1/sin A – 1/(cosec A + cot A)
+103	Trigonometry	 1/sin A – 1/(cosec A + cot A)	 1/(cosec A – cot A) – 1/sin A
+104	Trigonometry	 1/(cosec(x) – cot(x)) – 1/sin(x)	 1/sin(x) – 1/(cosec(x) + cot(x))
+105	Trigonometry	 1/sin(x) – 1/(cosec(x) + cot(x))	 1/(cosec(x) – cot(x)) – 1/sin(x)
+106	Trigonometry	 sec A (1 – sin A)(sec A + tan A)	1
+107	Trigonometry	 sec(x)(1 – sin(x))(sec(x) + tan(x))	1
+108	Trigonometry	 (sin A + cosec A)^2 + (cos A + sec A)^2	 7 + tan^2A + cot^2A
+109	Trigonometry	 (sin(x) + cosec(y))^2 + (cos(x) + sec(x))^2 = 7 + tan^2A + cot^2A	
