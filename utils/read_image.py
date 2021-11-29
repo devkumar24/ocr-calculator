@@ -7,7 +7,7 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
-def read_image(image_path, show = True, module : str = "", cvtColor : bool = True):
+def read_image(image_path, show = True, module : str = "", cvtColor : bool = False):
     # complete the function
     if module == "opencv":
         image = cv2.imread(image_path)
@@ -47,3 +47,13 @@ def resize_image(image_path, show = True, module : str = "" ):
         if show:
             image.show()
         return np.array(image)
+
+def show_image(image):
+    cv2.imshow("Image", image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+
+# image_path = "A:\\Pending Projects\\OCR Calculator\\ocr-calculator\\Images\\bodmas.jpeg"
+# image = resize_image(image_path, show=False)
+# show_image(image)
