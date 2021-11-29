@@ -91,8 +91,8 @@ class Calculator:
 				opList.remove(y)
 		return numList, opList 
 #ek baar check
-cal = Calculator(input()) #input mai to have text
-print(cal.result)
+# cal = Calculator(input()) #input mai to have text
+# print(cal.result)
 
 # while True:
 # 	try:
