@@ -24,6 +24,8 @@ warnings.filterwarnings('ignore')
 #modules required to get our results
 from utils import *
 import utils
+from modelling.prediction import get_prediction
+from modelling import prediction
 
 # path where all images will be stored
 path_of_image = "A:\Pending Projects\OCR Calculator\ocr-calculator\Images"
@@ -60,13 +62,19 @@ class App:
         self.frame.pack(side=TOP)
 
         self.select_button = Button(self.frame, borderwidth=7, bg="black", fg="white", text="Select From Computer", font="comicsansms 13", command=self.openImage) # created a select button which will select the image from our local machine
-        self.select_button.pack(side=LEFT,anchor='ne', pady=20, padx=35)
+        self.select_button.pack(side=TOP)
 
-        self.snapshot = Button(self.frame, borderwidth=7, bg="black", fg="white", text="SnapShot", font="comicsansms 13", command=self.takeSnap) # snapshot is the button that is used to capture the images from the web camera
-        self.snapshot.pack(side = BOTTOM, anchor='ne', padx=35)
+        self.showContours = Button(self.frame, borderwidth=7, bg="black", fg="white", text="Show Contours", font="comicsansms 13", command=self.showContour) # show contours button is used to plot the comtours in the image
+        self.showContours.pack(side = TOP, pady=10, padx=10)
+
+        self.predictions = Button(self.frame, borderwidth=7, bg="black", fg="white", text="Get Predictions", font="comicsansms 13", command=self.showPredictions) # predictions button will show the predictions of the problem
+        self.predictions.pack(side = TOP, padx=10, pady=10)
 
         self.webcam_button = Button(self.frame, borderwidth=7, bg="black", fg="white", text="Open WebCam", font="comicsansms 13", command=self.openCamera) # webcam button is used to open the web camera of the local machine
-        self.webcam_button.pack(side=LEFT,anchor='ne', pady=20,padx=35)
+        self.webcam_button.pack(side=RIGHT, pady=10, padx=10)
+
+        self.snapshot = Button(self.frame, borderwidth=7, bg="black", fg="white", text="SnapShot", font="comicsansms 13", command=self.takeSnap) # snapshot is the button that is used to capture the images from the web camera
+        self.snapshot.pack(side = RIGHT, pady=10, padx=10)
 
         # now we will initialize our output button which will show the output of our given input image
         self.output_frame = Frame(self.root)
@@ -89,7 +97,7 @@ class App:
             self.closeCamera() # it will close the camera
         
         global file
-        file = askopenfilename(defaultextension=".png", filetypes=[("JPG Image","*.jpg"), ("All Files", "."), ("PNG Image","*.png")]) # askopenfilename is  tkinter function to open the required image
+        file = askopenfilename(defaultextension=".png", filetypes=[("JPG Image","*.jpg"), ("All Files", "."), ("PNG Image","*.png"),("JPEG Image","*.jpeg")]) # askopenfilename is  tkinter function to open the required image
         # if file is not selected then we define the image file is None
         if file == "":
             file = None
@@ -109,13 +117,16 @@ class App:
     # show output function it will show the output of the given input
     def showOutput(self):
         try:
-            # input_text = input_file(filename=self.filename)
-            input_text = "sin^2(x) + cos^2(x)"
-            print(input_text)
-            output_text = get_output(input_text)
-            print(output_text)
-            text = "Input : " + str(input_text) + "\nOutput : " + str(output_text[0])
-            msgs.showinfo("Output",message=text ) # it will display our input and output
+            if self.filename  != "":
+                input_text = input_file(filename=self.filename)
+                # input_text = "sin^2(x) + cos^2(x)"
+                print(input_text)
+                output_text = get_output(input_text)
+                print(output_text)
+                text = "Input : " + str(input_text) + "\nOutput : " + str(output_text[0])
+                msgs.showinfo("Output",message=text ) # it will display our input and output
+            else:
+                msgs.showwarning("Error", "No Data Found!")
         except:
             # input_text = input_file(filename=self.filename)
             # print(input_text)
@@ -168,8 +179,15 @@ class App:
             print("File saved ")
             self.filename = filename
             print(self.filename)
-            
-            
+
+    def showContour(self):
+        filename = self.filename
+        _ = prediction.preprocessInput(filename=filename,show=True)        
+
+    def showPredictions(self):
+        get_prediction(self.filename, show=True)
+
+        
 # this function is used to get the frame and used to save the image
 # note: this function is out class, irrespective of the any other datatype
 def get_frame(video):
@@ -187,8 +205,8 @@ def input_file(filename : str = ""):
     """
     It will take the input filename, and extract the input the maths text from it.
     """
-    text, image =  utils.get_text.get_text(filename)
-    return text
+    
+    return get_prediction(filename) 
 
 def get_output(input_text : str = ""):
     """
